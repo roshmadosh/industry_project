@@ -16,11 +16,11 @@
 
 
 @mixin input {
-  padding: 0.5rem;
+  padding: 0.4rem;
     font-family: 'Avenir';
-    color:#33333340;
+    color:#000000;
     font-size: 14px;  
-    background: #D9D9D9;
-    border: none;
+    background: #FFFFFF;
+    border: 1px solid #000000;
     border-radius: 10px;
 }
