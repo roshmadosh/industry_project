@@ -1,7 +1,8 @@
 import './App.scss';
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/Home/Home';
-import Header from './components/Header';
+import Form from './pages/Form/Form';
+// import Header from './components/Header';
 
 
 
@@ -12,12 +13,12 @@ function App() {
     <div className="App">
       
         <BrowserRouter>
-        <Header/>
+        {/* <Header/> */}
            <Routes>
             <Route path='/' element={<HomePage/>} />
-            <Route path='/form1' element />
-            <Route path='/form2' element />
-            <Route path='/form3' element />
+            <Route path='/form1' element={<Form/>} />
+            {/* <Route path='/form2' element />
+            <Route path='/form3' element /> */}
             <Route path='/result' element />
            </Routes>
         </BrowserRouter>

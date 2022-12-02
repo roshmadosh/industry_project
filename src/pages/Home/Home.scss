@@ -1,3 +1,53 @@
 @use '../../styles/font' as *;
 @use '../../styles/mixins' as *;
 @use '../../styles/variable' as *;
+
+
+
+.hero{
+
+    margin: 0%;
+    display: flex;
+    
+
+    &__content{
+        font-family: 'Avenir';
+        padding-top: 8rem;
+        padding-left: 8rem;
+        width: 25rem;
+        text-align: center;
+    }
+
+    &__text{
+        margin-bottom: 2.5rem;
+    }
+
+    &__title{
+        font-weight: 400;
+        font-size: 48px;
+
+    }
+
+    &__btn{
+        font-family: 'Avenir';
+        font-size: 16px;
+        width: 180px;
+        height: 50px;
+        background: #D9D9D9;
+        border-radius: 20px;
+        border: none;
+    }
+
+
+    &__bg{
+        position: fixed;
+        right: 0;
+        background-image:url('../../Assetes/image/example.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40vw;
+        height: 100vh;
+    }
+}

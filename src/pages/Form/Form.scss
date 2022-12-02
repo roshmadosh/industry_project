@@ -1,0 +1,115 @@
+@use '../../styles/font' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/variable' as *;
+
+.form{
+    margin:0%;
+    margin-bottom: 20rem;
+    display:flex;
+    justify-content: space-between;
+
+
+    &__container{
+        font-family: 'Avenir';
+        padding-left: 8rem;
+        text-align: center;
+        width: 30%;
+    }
+
+    &__content{
+        width: 450px;
+    }
+
+    &__info{
+        display: flex;
+    }
+
+    &__main-title{
+        font-weight: 400;
+    }
+    &__subtitle{
+        font-weight: 400;
+        color: #33333380;
+    }
+
+    &__name, &__info, &__adress{
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    &__name--input1, &__name--input2,&__name--input3, &__adress--input1, &__adress--input2,&__tel--input{
+        @include input;
+        margin-right:0.5rem;
+    }
+
+    &__name--input3{
+        width: 11rem;
+    }
+
+    &__name--input2{
+        width: 2.5rem;
+    }
+
+    &__tel--input{
+        width: 12rem;
+    }
+    &__tel,&__birthday{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__adress--input1{
+        width: 15rem;
+    }
+
+    &__select{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--box{
+            flex-direction: row;
+        }
+    }
+
+}
+
+.progrss-bar{
+    width: 100%;
+}
+
+
+.next-btn{
+    font-family: 'Avenir';
+    font-size: 16px;
+    width: 170px;
+    padding: 0.5rem;
+    background: #D9D9D9;
+    border-radius: 10px;
+    border: none;
+}
+
+
+[type="date"]{
+    padding: 0.5rem;
+    font-family: 'Avenir';
+    color:#33333340;
+    font-size: 14px;
+    height: 20px;
+    width: 12rem;  
+    background: #D9D9D9;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.hero__bg{
+    position: fixed;
+    background-image:url('../../Assetes/image/example.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40vw;
+    height: 100vh;
+}
