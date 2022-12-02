@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Response
-from pydantic import BaseModel
-from .graph import bell_curve_salary_to_rent_plot
+from .graph import bell_curve_salary_to_rent_plot, rent_histogram
 from PIL import Image
 import io
 from fastapi.middleware.cors import CORSMiddleware
@@ -27,8 +26,8 @@ app.add_middleware(
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/data/{ratio}", responses = { 200: { "content": {"image/png": {}}}}, response_class=Response)
-async def predict(ratio):
+@app.get("/data/plot/{ratio}", responses = { 200: { "content": {"image/png": {}}}}, response_class=Response)
+async def generate_plot(ratio):
 
     bell_curve_salary_to_rent_plot(float(ratio))
     image = Image.open(r"testplot.png") 
@@ -36,5 +35,15 @@ async def predict(ratio):
     image.save(byteIO, format='PNG')
     byteArr = byteIO.getvalue()
     return Response(content=byteArr, media_type="image/png")
+
+
+@app.get('/data/histo/{rent}/{location}')
+async def generate_histo(rent, location):
+    image = rent_histogram(float(rent), location)
+    image = Image.open(r"histo.png") 
+    byteIO = io.BytesIO()
+    image.save(byteIO, format='PNG')
+    byteArr = byteIO.getvalue()
+    return Response(content=byteArr, media_type="image/png")    
 
 

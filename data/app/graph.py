@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
+import seaborn as sns
 
 def bell_curve_salary_to_rent_plot(salary_to_rent_ratio):    #define mean and standard deviation
     mean = 40
@@ -24,3 +25,24 @@ def bell_curve_salary_to_rent_plot(salary_to_rent_ratio):    #define mean and st
     #plt.axvline(salary_to_rent_ratio,ymax=norm.pdf(salary_to_rent_ratio,40,10),color='black')
     plt.axvline(salary_to_rent_ratio,ymin=0,ymax=norm.pdf(salary_to_rent_ratio,40,10)/.0425,color='black')   
     plt.savefig('testplot.png')
+
+
+
+def rent_histogram(rent,location):    #metrics for random data
+    mean=2000
+    std=800    #creating random data
+    rent_data=np.random.normal(mean,std,1000)+ np.random.randint(-200,500)
+    rent_data=np.where(rent_data<0,rent_data+1000,rent_data)    #plot histogram
+    histogram_plot=sns.histplot(rent_data,bins=30)
+    plt.xlabel(f'Rent Prices Locally ($)')
+    plt.ylabel('Quantity of Renters')
+    plt.title(f'Local Rent Prices {location}')    
+    patch_number=0
+    np_bins=np.histogram(rent_data,bins=30)[1].tolist()
+    for j in range(len(np_bins)):
+        if rent>(np_bins[j]):
+            patch_number=j    
+    histogram_plot.patches[patch_number].set_facecolor('salmon')
+    plt.savefig('histo.png')
+    
+
