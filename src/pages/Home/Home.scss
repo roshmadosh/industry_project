@@ -5,11 +5,8 @@
 
 
 .hero{
-
     margin: 0%;
     display: flex;
-    
-
     &__content{
         font-family: 'Avenir';
         padding-top: 8rem;
@@ -17,15 +14,15 @@
         width: 25rem;
         text-align: left;
     }
-
     &__text{
+        margin-top: 0;
         margin-bottom: 2.5rem;
     }
 
     &__title{
         font-weight: 400;
         font-size: 48px;
-
+        margin-bottom: 0;
     }
 
     &__btn{
