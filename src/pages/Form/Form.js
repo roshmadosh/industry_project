@@ -60,7 +60,7 @@ const Form = () =>{
                <div className='form__content'> 
                         <h3 className='form__subtitle'>Question 3/3</h3>
                         <h1 className='form__main-title'>Housing Information</h1>
-                        <label className='form__label'>How many bathrooms are in your apartment?</label>
+                        <label className='form__label--text'>How many bathrooms are in your apartment?</label>
                    {/* <div className='form__select'>
                           <div className='form__select--box'>   
                               <input type="radio"  className="select1" value="1"/>

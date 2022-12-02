@@ -18,7 +18,7 @@
 
     &__content{
         padding-top: 2rem;
-        width: 450px;
+        width: 500px;
     }
 
     &__info{
@@ -38,13 +38,13 @@
         text-align: left;
     }
 
-    &__name--input1, &__name--input2,&__name--input3, &__adress--input1, &__adress--input2,&__tel--input{
+    &__name--input1, &__name--input2,&__name--input3, &__adress--input1, &__adress--input2,&__tel--input, &__month--input{
         @include input;
         margin-right:0.5rem;
     }
 
     &__name--input3{
-        width: 11rem;
+        width: 8rem;
     }
 
     &__name--input2{
@@ -61,6 +61,11 @@
     &__adress--input1{
         width: 15rem;
     }
+
+    &__adress--input2{
+        width: 5rem;
+    }
+
     &__select{
         display: flex;
        flex-direction: column;
@@ -84,7 +89,11 @@
     }
 
     &__label{
-        margin:1rem 0;
+        margin-bottom:1rem ;
+    }
+
+    &__label--text{
+        margin-bottom:1rem ;
     }
 
     &__btns{
@@ -164,16 +173,15 @@
 
 
 [type="date"]{
-    padding: 0.5rem;
+    padding: 0.4rem;
     font-family: 'Avenir';
-    color:#33333340;
-    font-size: 14px;
-    height: 20px;
-    width: 12rem;  
-    background: #D9D9D9;
-    border: none;
+    color:#000000;
+    font-size: 14px;  
+    background: #FFFFFF;
+    border: 1px solid #000000;
     border-radius: 10px;
     text-transform: uppercase;
+    width: 9rem;
 }
 
 .hero__bg{
