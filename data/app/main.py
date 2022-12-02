@@ -30,17 +30,19 @@ async def root():
 async def generate_plot(ratio):
 
     bell_curve_salary_to_rent_plot(float(ratio))
-    image = Image.open(r"testplot.png") 
+    
+    image = Image.open("testplot.png") 
     byteIO = io.BytesIO()
     image.save(byteIO, format='PNG')
     byteArr = byteIO.getvalue()
     return Response(content=byteArr, media_type="image/png")
 
 
-@app.get('/data/histo/{rent}/{location}')
+@app.get('/data/hist/{rent}/{location}')
 async def generate_histo(rent, location):
-    image = rent_histogram(float(rent), location)
-    image = Image.open(r"histo.png") 
+    rent_histogram(float(rent), location)
+
+    image = Image.open("hist.png") 
     byteIO = io.BytesIO()
     image.save(byteIO, format='PNG')
     byteArr = byteIO.getvalue()
