@@ -154,12 +154,11 @@
     border-radius: 10px;
     background:$blue;
     color: white;
-    transition-property: opacity;
     transition: 0.5s;
 
     &:hover{
-        opacity :40%;
-        border:solid 1px $blue;
+        background-color: #739BEC;
+        border: none;
     }
 }
 
