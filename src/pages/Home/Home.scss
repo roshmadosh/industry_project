@@ -45,17 +45,25 @@
             border: none;
         }
     }
+  
+}
 
+.nycLogo{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top:30px;
+    left:700px;
+}
 
-    &__bg{
-        position: fixed;
-        right: 0;
-        background-image:url('../../Assetes/image/example.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 40vw;
-        height: 100vh;
-    }
+.home__bg{
+    position: fixed;
+    right: 0;
+    background-image:url('../../Assetes/image/HOME-1.png');
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: repeat;
+    background-size: contain;
+    width: 34vw;
+    height: 100vh;
 }
