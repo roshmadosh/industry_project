@@ -9,18 +9,15 @@ import io
 
 app = FastAPI()
 
-# define params and param types here for model
-class Item(BaseModel):
-    salary_to_rent_ratio: float
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-@app.post("/data/", responses = { 200: { "content": {"image/png": {}}}}, response_class=Response)
-async def predict(item: Item):
+@app.get("/data/{ratio}", responses = { 200: { "content": {"image/png": {}}}}, response_class=Response)
+async def predict(ratio):
 
-    bell_curve_salary_to_rent_plot(item.salary_to_rent_ratio)
+    bell_curve_salary_to_rent_plot(float(ratio))
     image = Image.open(r"testplot.png") 
     byteIO = io.BytesIO()
     image.save(byteIO, format='PNG')
