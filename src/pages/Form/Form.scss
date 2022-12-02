@@ -49,7 +49,7 @@
     }
 
     &__name--input3{
-        width: 8rem;
+        width: rem;
     }
 
     &__name--input2{
@@ -68,7 +68,7 @@
     }
 
     &__adress--input2{
-        width: 5rem;
+        width: 7rem;
     }
 
     &__select{
@@ -140,6 +140,7 @@
     color: $blue ;
     transition: 0.5s;
     position:relative;
+    cursor: pointer;
     // &:hover{
     //     // background:$blue;
     //     // color: white;
@@ -165,6 +166,7 @@
     transition: 0.5s;
     margin-left: 2rem;
     position:relative;
+    cursor: pointer;
 
     &:hover{
         background-color: #739BEC;
@@ -188,7 +190,7 @@
     border: 1px solid #000000;
     border-radius: 10px;
     text-transform: uppercase;
-    width: 9rem;
+    width: 11rem;
 }
 .hero__bg{
     position: fixed;

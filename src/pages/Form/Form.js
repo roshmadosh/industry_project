@@ -51,7 +51,7 @@ const Form = () =>{
                         </div>
                            <div className='form__birthday'>
                            <label className='form__label'>Date of Birth</label>
-                              <input type="date" className='form__adress--input2' name='first_name' placeholder='First Name'/>
+                              <input type="date" className='form__date--input2' name='first_name' placeholder='First Name'/>
                            </div>
                         </div> 
                         <NavLink to='/Form2'>
