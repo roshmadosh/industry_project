@@ -4,36 +4,123 @@
 
 .conclusion {
     font-family: "Avenir";
-    margin: 4rem 2rem 4rem 2rem;
-    background-color: #d3d3d3;
 
     &__title {
         font-weight: bold;
         font-size: 1.5rem;
+        display: flex;
     }
+
+
 
     &__text{
-        line-height: 0;
+        margin-top: 1rem;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
     }
 
-    &__square {
+    
+    &__text2{
         margin-top: 3rem;
-        height: 250px;
-        width: 300px;
-        background-color: #555
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
     }
+
+    &__input{
+        background: #a1a1a1;
+        border: 2px solid #a1a1a1;
+        border-radius: .5rem;
+        width: 100%;
+        background: url('../../Assetes/image/Vector.png') no-repeat 9% ;
+        background-position: 1rem;
+        padding: .2rem 0rem;
+        background-size: 3.5%;
+    }
+
+    &__inputTitle{
+        margin-top: 2rem;
+    }
+
+    &__check {
+        margin-left: -2rem;
+        margin-right: 3.5rem;
+        height: 8rem;
+        transition: width 2s, height 2s, transform 2s;
+    }
+
+    &__check:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+      }
 
     &__content {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        margin: 4rem 20rem 4rem 20rem;
+        padding: 0 3rem 2.8rem 3rem;
+        background-color: #d3d3d3;
+        border: 2px solid orangered;
     }
 
-    &__btn {
-        margin-bottom: 1rem;
-        background-color: transparent;
-        border: 2px solid #555;
-        padding: .5rem 1rem;
+    &__content2 {
+        display: flex;
+        align-items: center;
+        margin: 4rem 20rem 4rem 20rem;
+        padding: 0 3rem 2.8rem 3rem;
+        background-color: #d3d3d3;
         border-radius: .5rem;
+        margin-top: 4rem;
+    margin-bottom: 4rem;
     }
+
+    &__number{
+        margin-right: 7rem;
+        height: 4rem;
+    }
+
+    &__btn{
+        background:$blue;
+        font-family: 'Avenir';
+        font-size: 16px;
+        width: 170px;
+        padding: 0.5rem;
+        border:solid 1px $blue;
+        border-radius: 10px;
+        background:$blue;
+        color: white;
+        transition: 0.5s;
+        margin-top: 2rem;
+    
+        &:hover{
+            background-color: #739BEC;
+            border: none;
+        }
+    }
+
+    &__btn2{
+        background:$blue;
+        font-family: 'Avenir';
+        font-size: 16px;
+        width: 170px;
+        padding: 0.5rem;
+        border:solid 1px $blue;
+        border-radius: 10px;
+        background:$blue;
+        color: white;
+        transition: 0.5s;
+        margin-top: 4rem;
+    
+        &:hover{
+            background-color: #739BEC;
+            border: none;
+        }
+    }
+
+    
 }
+
