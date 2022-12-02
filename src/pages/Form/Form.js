@@ -12,7 +12,7 @@ const Form = () =>{
    <div className='form'>
        <div className='hero__bg'></div>
          <div className='form__container'>
-            <progress className='progrss-bar' value="33" max="100"></progress>
+            <progress className='progrss-bar w3-container w3-round w3-blue' value="33" max="100"></progress>
                   <span className='progress__dot  progress__dot--active'></span>
                   <span className='progress__dot '></span>
                   <span className='progress__dot'></span>     
@@ -61,7 +61,7 @@ const Form = () =>{
                         <h3 className='form__subtitle'>Question 3/3</h3>
                         <h1 className='form__main-title'>Housing Information</h1>
                         <label className='form__label'>How many bathrooms are in your apartment?</label>
-                   <div className='form__select'>
+                   {/* <div className='form__select'>
                           <div className='form__select--box'>   
                               <input type="radio"  className="select1" value="1"/>
                               <label>1</label>
@@ -80,7 +80,7 @@ const Form = () =>{
                               <input type="radio"  name="select4" value="2"/>
                               <input type="text" name='amount'/>
                            </div>
-                  </div>  
+                  </div>   */}
 
                   <div className='form__rent'>
                      <label className='form__label'>Monthly Rent</label>
