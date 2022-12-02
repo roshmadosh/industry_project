@@ -81,9 +81,6 @@
         @include input;
         width: 5rem;  
        }
-
-       
-
         &--box{
         display:flex;
         align-items: flex-start;
@@ -118,16 +115,14 @@
 
 .progrss-bar{
     width: 115%;
-    height: 2rem;
-
+    height: 3rem;
     &::-webkit-progress-bar {
         background-color: #eee;
         border-radius: 10px;
-        color: aquamarine;
-        
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
     }
 }
+
 
 .previous-btn{
     font-family: 'Avenir';

@@ -16,6 +16,9 @@ const Form = () =>{
        <div className='hero__bg'></div>
          <div className='form__container'>
          <img className='nycLogo' src={nyclogo}></img>
+         <div className="progrss">
+         <div className="progress-value"></div>
+         </div>
             <progress className='progrss-bar w3-container w3-round w3-blue' value="33" max="100"></progress>
                   <span className='progress__dot  progress__dot--active'></span>
                   <span className='progress__dot '></span>
