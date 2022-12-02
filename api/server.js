@@ -4,6 +4,8 @@ const app = express();
 
 const emails = []
 
+const PORT = 5000;
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,5 +21,5 @@ app.post("/email", (req, res) => {
 });
 
 
-app.listen(3000,() => console.log("Server listening at port 3000"));
+app.listen(PORT,() => console.log(`Server listening at port ${PORT}`));
 
