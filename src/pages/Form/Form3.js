@@ -50,7 +50,7 @@ const Form3 = () =>{
                   <NavLink to='/Form2'>
                      <button className='previous-btn'>Previous<img className='previous-btn--icon' src={arrowpre}/></button>
                   </NavLink>  
-                  <NavLink to='/'> 
+                  <NavLink to='/conclusion'> 
                      <button className='next-btn'>Next <img className='next-btn--icon' src={arrownext}/></button>
                   </NavLink>
                   </div>
