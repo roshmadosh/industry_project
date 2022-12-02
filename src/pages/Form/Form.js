@@ -63,19 +63,37 @@ const Form = () =>{
                         <label className='form__label'>How many bathrooms are in your apartment?</label>
                    <div className='form__select'>
                           <div className='form__select--box'>   
-                             <input type="radio"  className="fav_language" value="1"/>
-                             <label for="html">HTML</label>
+                              <input type="radio"  className="select1" value="1"/>
+                              <label>1</label>
                            </div> 
                            <div className='form__select--box'>    
-                             <input type="radio" id="css" name="fav_language" value="2"/>
-                             <label for="css">CSS</label>
+                              <input type="radio"  name="select2" value="2"/>
+                              <label>2</label>
+
                            </div>
                            <div className='form__select--box'>
-                              <input type="radio" id="javascript" name="fav_language" value="3"/> 
-                              <label for="css">CSS</label>
+                              <input type="radio"  name="select3" value="2"/>
+                              <label>3</label>
                            </div>
-                  </div>     
+
+                           <div className='form__select--box'>
+                              <input type="radio"  name="select4" value="2"/>
+                              <input type="text" name='amount'/>
+                           </div>
+                  </div>  
+
+                  <div className='form__rent'>
+                     <label className='form__label'>Monthly Rent</label>
+                     <input type="text" className='form__month--input' name='tel' placeholder='$ 55.66'/>
+                  </div>
+
+
+                  <div className='form__btns'>
+                     <button className='previous-btn'>Previous</button>
+                     <button className='next-btn'>Next</button>
+                  </div>
                </div>
+               
             
                
             
