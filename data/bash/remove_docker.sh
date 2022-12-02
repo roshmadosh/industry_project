@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker image rm industry
+docker image rm industry-project
