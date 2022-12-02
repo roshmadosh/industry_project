@@ -20,7 +20,6 @@ async def root():
 @app.post("/data/", responses = { 200: { "content": {"image/png": {}}}}, response_class=Response)
 async def predict(item: Item):
 
-    ratio = item.salary_to_rent_ratio
     bell_curve_salary_to_rent_plot(item.salary_to_rent_ratio)
     image = Image.open(r"testplot.png") 
     byteIO = io.BytesIO()

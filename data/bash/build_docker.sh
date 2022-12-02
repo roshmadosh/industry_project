@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --rm -t industry .
+docker build --rm -t industry-project .
