@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+# define params and param types here for model
 class Item(BaseModel):
     id: int
     name: str
@@ -13,5 +14,5 @@ async def root():
 
 @app.post("/data/")
 async def predict(item: Item):
-    # add data scienc-y stuff here...
+    # add data scienc-y stuff here
     return item
